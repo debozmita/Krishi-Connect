@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi-Connect | Agricultural Ecosystem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🌾 <span>Krishi</span>-Connect</div>
+        <nav class="nav-links">
+            <a href="#marketplace" class="active">Marketplace</a>
+            <a href="#rentals">Equipment Rental</a>
+            <a href="#advisory">Advisory Services</a>
+        </nav>
+        <button class="btn-primary" onclick="openContact()">Get Started</button>
+    </header>
+
+    <section class="hero">
+        <h1>Empowering Farmers, Direct to Market</h1>
+        <p>Buy, rent, and grow with India's unified agricultural platform.</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search crops, tractors, or seeds..." onkeyup="filterItems()">
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Marketplace Section -->
+        <section id="marketplace" class="section">
+            <div class="section-header">
+                <h2>Direct Farmer Marketplace</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterCategory('all')">All</button>
+                    <button class="filter-btn" onclick="filterCategory('grains')">Grains</button>
+                    <button class="filter-btn" onclick="filterCategory('vegetables')">Vegetables</button>
+                </div>
+            </div>
+
+            <div class="card-grid" id="cropGrid">
+                <div class="card" data-category="grains">
+                    <div class="card-badge">Organic</div>
+                    <h3>Fresh Organic Wheat</h3>
+                    <p class="seller">👨‍🌾 Farmer: Ramesh Kumar</p>
+                    <p class="location">📍 Punjab, India</p>
+                    <div class="price">₹2,200 <span>/ Quintal</span></div>
+                    <button class="btn-card" onclick="buyCrop('Organic Wheat')">Buy Directly</button>
+                </div>
+
+                <div class="card" data-category="vegetables">
+                    <div class="card-badge">Fresh Harvest</div>
+                    <h3>Premium Tomatoes</h3>
+                    <p class="seller">👨‍🌾 Farmer: Sunita Devi</p>
+                    <p class="location">📍 Maharashtra, India</p>
+                    <div class="price">₹1,800 <span>/ Quintal</span></div>
+                    <button class="btn-card" onclick="buyCrop('Premium Tomatoes')">Buy Directly</button>
+                </div>
+
+                <div class="card" data-category="grains">
+                    <div class="card-badge">Verified Bulk</div>
+                    <h3>Basmati Rice</h3>
+                    <p class="seller">👨‍🌾 Farmer: Gurpreet Singh</p>
+                    <p class="location">📍 Haryana, India</p>
+                    <div class="price">₹3,500 <span>/ Quintal</span></div>
+                    <button class="btn-card" onclick="buyCrop('Basmati Rice')">Buy Directly</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Rental Section -->
+        <section id="rentals" class="section">
+            <div class="section-header">
+                <h2>Equipment Rental Hub</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-badge">Available</div>
+                    <h3>Mahindra 575 DI Tractor</h3>
+                    <p class="seller">🔧 Owner: Rajesh Verma</p>
+                    <p class="location">📍 Uttar Pradesh, India</p>
+                    <div class="price">₹800 <span>/ Hour</span></div>
+                    <button class="btn-card" onclick="rentEquipment('Mahindra Tractor')">Rent Machinery</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-badge">Available</div>
+                    <h3>Paddy Combine Harvester</h3>
+                    <p class="seller">🔧 Owner: Amit Patel</p>
+                    <p class="location">📍 Gujarat, India</p>
+                    <div class="price">₹1,500 <span>/ Hour</span></div>
+                    <button class="btn-card" onclick="rentEquipment('Combine Harvester')">Rent Machinery</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advisory Services Section -->
+        <section id="advisory" class="section">
+            <div class="section-header">
+                <h2>Expert Advisory & Soil Testing</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-badge">Expert Service</div>
+                    <h3>Soil Health Diagnostics</h3>
+                    <p class="seller">👨‍🔬 Specialist: Dr. A. Sharma</p>
+                    <p class="location">📍 Online / On-field</p>
+                    <div class="price">Free Consultation</div>
+                    <button class="btn-card" onclick="bookAdvisory('Soil Testing')">Book Appointment</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

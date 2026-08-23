@@ -40,4 +40,3 @@
 
 * **Project:** Krishi-Connect
 * **Development Phase:** Hackathon Frontend Prototype
-*
